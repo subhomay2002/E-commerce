@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="ecommerce.css" />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+      rel="stylesheet"
+    />
+    <style>
+        .home-hero{
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 2rem;
+            position: relative;
+            overflow: hidden;
+
+        }
+        .home-card{
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1);
+             display: grid;
+            grid-template-columns: 1.1fr 0.9fr;
+            max-width: 1100px;
+            width: 100%;
+            overflow: hidden;
+
+        }
+        .home-content{
+            padding: 2.25rem 2rem;
+        }
+        .home-title{
+            font-size: 2.2rem;
+            line-height: 1.2;
+            color: #ee2610;
+            margin-bottom: 0.75rem;
+            
+        }
+        .home-media{
+            position: relative;
+            background: #bd6b6b;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .home-media img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .home-subtitle{
+            color: #1f1e1e;
+            margin-bottom: 1.25rem;    
+        }
+        .home-cta{
+            display: flex;
+            gap: 0.75rem;
+            flex-wrap: wrap;
+
+        }
+        .home-badge{
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.4rem 0.8rem;
+            border-radius: 999px;
+            background: rgba(228, 116, 195, 0.12);
+            color: #073be3;
+            font-weight: 600;
+            font-size: 0.9rem;
+            margin-bottom: 1rem;
+        }
+        .home-features{
+            display: grid;
+            grid-template-columns: repeat(3,minmax(0, 1fr));
+            gap: 0.75rem;
+            margin-top: 1.25rem;
+        }
+        .home-feature{
+            background: #f8f9fa;
+            border-radius: 12px;
+            padding: 0.9rem;
+            display: flex;
+            align-items: center;
+            gap: 0.6rem;
+            color: #444;
+            cursor: pointer;
+        }
+        .gallery{
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 1rem 2rem 2rem;
+        }
+        .gallery-title{
+            color: #fff;
+            text-align: center;
+            margin-bottom: 1rem;
+            font-size: 1.5rem;
+            opacity: 0.95;
+        }
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 1rem;
+        }
+        .gallery-item{
+            background: rgba(219, 213, 213, 0.95);
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+        .gallery-item img {
+            width: 100%;
+            height: 350px;
+            object-fit: cover;
+            display: block;
+        }
+        .home-footer{
+            text-align: center;
+            margin-top: 1rem;
+            color: #eee;
+            opacity: 0.8;
+            font-size: 0.9rem;
+        }
+        @media (max-width: 900px){
+            .home-card{
+                grid-template-columns: 1fr;
+            }
+            .home-media {
+                height: 240px;
+            }
+        }
+        .search-box input {
+            padding: 8px 15px;
+            border: none;
+            border-radius: 20px;
+            outline: none;
+            transition: 0.3s ease;
+        }
+        .search-box input:focus {
+            width: 180px;
+        }
+
+
+    </style>
+
+</head>
+<body>
+    <!-- Navigation -->
+     <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <i class="fa-solid fa-cart-shopping" style="color: red;"></i>
+                <span>E-Commerce</span>
+            </div>
+            <div class="nav-menu" id="nav-menu">
+                <a href="#" class="nav-link">Dashboard</a>
+                <a href="#" class="nav-link">Profile</a>
+                <a href="#" class="nav-link">Wishlist</a>
+                <a href="#" class="nav-link">Add To Cart</a>
+                <div class="search-box">
+                <input type="text" placeholder="Search...">
+                </div>
+            </div>
+        </div>
+       
+     </nav>
+    <section class="home-hero">
+        <div class="home-card">
+            <div class="home-media">
+                <img src="/ecommerce.png" alt="Shopping">
+            </div>
+            <div class="home-content">
+                <span class="home-badge">
+                    <i class="fa-solid fa-cart-shopping" style="color: #0b0b0b; font-size: 20px;"></i>E-Commerce
+                </span>
+                <h1 class="home-title"> Welcome E-Commerce Website</h1>
+                <p class="home-subtitle">
+                    Let's Creates your Own Styel
+                </p>
+                <div class="home-cta">
+                    <a href="#" class="btn btn-primary"><i class="fas fa-user-plus"></i>Create Account</a>
+                    <a href="#" class="btn btn-outline"><i class="fas fa-sign-in-alt"></i>Login</a>
+                </div>
+                <div class="home-features">
+                    <div class="home-feature">
+                        <i class="fa-brands fa-facebook" style="color: blue; font-size:40px;"></i>Facebook
+                    </div>
+                    <div class="home-feature">
+                        <i class="fa-brands fa-instagram" style=" background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888); font-size: 30px;  -webkit-text-fill-color: white; border-radius: 10px; padding: 5px 5px ;"></i>Instagram
+                    </div>
+                </div>
+            </div>
+            
+            </div>
+        </div>
+    </section>
+    <section class="gallery">
+      <h2 class="gallery-title">Trending Items</h2>
+      <div class="gallery-grid">
+        <div class="gallery-item">
+          <img src="/blog_a68e9293-ce0e-446d-bc6a-91339b97544d.webp" alt="Men's Wear" />
+        </div>
+        <div class="gallery-item">
+          <img src="/indoor-plants-for-mental-health-669e9bb4e8793.avif" alt="Plant" />
+        </div>
+        <div class="gallery-item">
+          <img src="/SFM_Shelfie_1.webp" alt="Beauty product" />
+        </div>
+        <div class="gallery-item">
+          <img src="/Choose-your-business-niche.webp" alt="electronic device" />
+        </div>
+      </div>
+    </section>
+    <div class="home-footer">© <span id="year"></span> E-Commerce</div>
+    
+</body>
+</html>
